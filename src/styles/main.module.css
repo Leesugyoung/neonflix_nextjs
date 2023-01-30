@@ -1,0 +1,100 @@
+.container {
+    background-color: #181818;
+}
+.gradient {
+    background-image: linear-gradient(to top, #181818, rgba(0, 0, 0, 0));
+    width: 520px;
+    height: 100px;
+    position: absolute;
+    top: 210px;
+}
+.banner_Title {
+    cursor: pointer;
+    color: #e5e5e5;
+    font-size: 38px;
+    font-weight: 700;
+    text-shadow: 2px 2px 3px rgb(0, 0, 0);
+    position: absolute;
+    top: 220px;
+    width: 520px;
+    padding: 20px;
+}
+.banner_Title a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+.banner_minititle{
+    color: #9f9f9f;
+    padding-left: 20px;
+    font-size: 14px;
+    position: absolute;
+    top: 290px;
+}
+.banner_minititle span:first-child{
+    color: #46d369;
+    padding: 1px 4px;
+    border-radius: 3px;
+    border: 1px solid #dadada;
+    margin-right: 10px;
+}
+.gird_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    padding: 20px;
+    padding-top: 0;
+    gap: 15px;
+}
+.Trending {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-top:30px;
+}
+.grid_Itemlist {
+    cursor: pointer;
+    position: relative;
+}
+.grid_Itemlist img {
+    width: 230px;
+    height: 345px;
+    border-radius: 6px;
+    transition: transform 0.2s ease-in-out;
+ }
+.grid_Itemlist:hover img {
+    transform: scale(1.05) translateY(-8px);
+}
+.Info {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    border-radius: 6px;
+    text-align: center;
+    opacity: 0;
+}
+.grid_Itemlist:hover .Info {
+    opacity: 1;
+    background-color: rgba(28, 28, 28, 0.7);
+}
+.Info_title {
+    font-size: 16px;
+    color: #e5e5e5;
+    font-weight: 700;
+    padding: 5px 20px;
+}
+.Info_average {
+    font-size: 16px;
+    color: #eaeaea;
+    font-weight: 500;
+    margin-top: 10px;
+}
