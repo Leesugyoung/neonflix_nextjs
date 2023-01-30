@@ -38,7 +38,7 @@ export default function Home() {
         >
           <Image
             src={`https://image.tmdb.org/t/p/w500${results[0].backdrop_path}`}
-            alt="results[0].backdrop_path"
+            alt="results[0].backdrop_pathh"
             width={520}
             height={310}
             priority
