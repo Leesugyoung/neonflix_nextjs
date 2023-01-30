@@ -1,10 +1,9 @@
 import Seo from "@/components/Seo";
-import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import main from "../styles/main.module.css";
-import fetch from "../fetch";
+import useSWR from "swr";
 
 interface IMovieProps {
   id: number;
@@ -18,15 +17,18 @@ interface IMovieProps {
   release_date: string;
 }
 
-export default function Home({
-  results,
-}: InferGetServerSidePropsType<GetServerSideProps>) {
+export default function Home() {
   const router = useRouter();
   const onClick = (id: number, title: string) => {
     router.push({
       pathname: `/movies/${title}/${id}`,
     });
   };
+  const {
+    data: { results },
+  } = useSWR("moviedata", () => {
+    return fetch(`http://localhost:3000/api/movies`).then(res => res.json());
+  });
   return (
     <>
       <div className={main.container}>
@@ -91,7 +93,7 @@ export default function Home({
   );
 }
 
-export async function getServerSideProps({}: GetServerSideProps) {
+/* export async function getServerSideProps({}: GetServerSideProps) {
   // 이 곳에 적힌 코드들은 서버에서만 실행됨!
   const { results } = await (
     await fetch(`http://localhost:3000/api/movies`)
@@ -102,4 +104,4 @@ export async function getServerSideProps({}: GetServerSideProps) {
       results,
     },
   };
-}
+} */
