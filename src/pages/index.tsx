@@ -26,8 +26,10 @@ export default function Home() {
   };
   const {
     data: { results },
-  } = useSWR("moviedata", () => {
-    return fetch(`http://localhost:3000/api/movies`).then(res => res.json());
+  } = useSWR("moviedata", async () => {
+    return await fetch(`http://localhost:3000/api/movies`).then(res =>
+      res.json()
+    );
   });
   return (
     <>
