@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import main from "../styles/main.module.css";
+import fetch from "../fetch";
 
 interface IMovieProps {
   id: number;
