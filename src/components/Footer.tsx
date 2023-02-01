@@ -20,6 +20,7 @@ export default function Footer() {
           text-align: center;
           padding-top: 20px;
           padding-bottom: 10px;
+          width: 520px;
         }
         span,
         p {
