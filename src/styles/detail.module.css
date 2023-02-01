@@ -1,12 +1,10 @@
 /* 디테일 페이지 */
-
 .container {
     min-width: 520px;
     width: 520px;
     padding: 20px;
     background-color: #181818;
     padding-top: 80px;
-    height: 100vh;
 }
 .backdrop_span {
     z-index: 1;
