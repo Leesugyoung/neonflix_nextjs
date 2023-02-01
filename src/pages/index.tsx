@@ -92,13 +92,10 @@ export default function Home({
   );
 }
 
-export async function getServerSideProps({}: GetServerSideProps) {
-  // 이 곳에 적힌 코드들은 서버에서만 실행됨!
-  const { data } = await axios.get(`http://localhost:3000/api/movies`);
-  const { results } = data;
+export async function getServerSideProps() {
+  const { results } = await (await fetch(`/api/movies`)).json();
   return {
     props: {
-      // -> pageProps
       results,
     },
   };
