@@ -31,7 +31,7 @@ export default function NavBar() {
           <a className={router.pathname === "/" ? "active" : ""}>Movie</a>
         </Link>
         <Link href="/tv" legacyBehavior>
-          <a className={router.pathname === "/series" ? "active" : "white"}>
+          <a className={router.pathname === "/tv" ? "active" : "white"}>
             Series
           </a>
         </Link>
