@@ -35,6 +35,11 @@ export default function NavBar() {
             Series
           </a>
         </Link>
+        <Link href="/search" legacyBehavior>
+          <a className={router.pathname === "/search" ? "active" : "white"}>
+            Serach
+          </a>
+        </Link>
       </div>
       <style jsx global>{`
         nav {
