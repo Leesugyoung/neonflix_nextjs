@@ -8,13 +8,6 @@
     height: 100vh;
 }
 
-@media (max-width: 767px){
-	.container{
-        width: 100%;
-        min-height: 590px;
-    }
-}
-
 .backdrop_span {
     z-index: 1;
     width: 500px;
@@ -66,4 +59,11 @@
     -webkit-line-clamp: 6; /* 라인수 */
     -webkit-box-orient: vertical;
     word-wrap: break-word;
+}
+
+@media (max-width: 767px){
+	.overview{
+        width: 100%;
+        min-height: 590px;
+    }
 }
