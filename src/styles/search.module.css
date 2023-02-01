@@ -1,6 +1,7 @@
 .container {
   background-color: #181818;
   width: 520px;
+  height: 100vh;
 }
 
 @media (max-width: 575px) {
