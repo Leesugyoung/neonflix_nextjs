@@ -57,7 +57,7 @@ export default function NavBar() {
         }
         nav a {
           font-weight: 00;
-          font-size: 14px;
+          font-size: 15px;
           color: #e5e5e5;
         }
         .active {
