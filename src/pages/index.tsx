@@ -26,6 +26,7 @@ export default function Home({
       pathname: `/movies/${title}/${id}`,
     });
   };
+  console.log(results);
 
   return (
     <>
