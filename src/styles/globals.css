@@ -44,16 +44,12 @@ table {
   /* 아래부터는 개별적으로 적용한 내용들! */
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: "Segoe UI", Roboto, Ubuntu, sans-serif;
-}
-
-body {
   max-width: 520px;
   width: 100%;
   margin: 0 auto;
   line-height: 1.2;
+	height: 100%;
+  font-family: "Segoe UI", Roboto, Ubuntu, sans-serif;
 }
 
 a {
@@ -63,4 +59,3 @@ a {
 * {
   box-sizing: border-box;
 }
-
