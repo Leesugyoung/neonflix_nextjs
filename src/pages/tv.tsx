@@ -1,44 +1,38 @@
-import Seo from "@/components/Seo";
+import Seo from "../components/Seo";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image";
 import main from "../styles/main.module.css";
 
-interface IMovieProps {
+interface ITvProps {
   id: number;
   backdrop_path: string;
-  original_title: string;
+  original_name: string;
   overview: string;
   poster_path: string;
-  title: string;
+  name: string;
   vote_average: number;
   genre_ids: [number];
-  release_date: string;
+  first_air_date: string;
 }
 
-export default function Home({
+export default function Series({
   results,
 }: InferGetServerSidePropsType<GetServerSideProps>) {
   const router = useRouter();
-  const onClick = (id: number, title: string) => {
+  const onClick = (id: number, name: string) => {
     router.push({
-      pathname: `/movies/${title}/${id}`,
+      pathname: `/tv/${id}/${name}`,
     });
   };
-  console.log("results", results);
-
   return (
     <>
-      <Seo title="Home" />
       <div className={main.container}>
-        <Link
-          href={`/movies/${results[0].title}/${results[0].id}`}
-          legacyBehavior
-        >
+        <Link href={`/tv/${results[0].id}/${results[0].name}`} legacyBehavior>
           <Image
             src={`https://image.tmdb.org/t/p/w500${results[0].backdrop_path}`}
-            alt="results[0].backdrop_pathh"
+            alt="results[0].backdrop_path"
             width={520}
             height={310}
             priority
@@ -47,36 +41,37 @@ export default function Home({
         </Link>
         <div className={main.gradient} />
         <div className={main.banner_Title}>
-          <a onClick={() => onClick(results[0].id, results[0].original_title)}>
-            {results[0].title}
+          <a onClick={() => onClick(results[0].id, results[0].name)}>
+            {results[0].name}
           </a>
         </div>
         <div className={main.banner_minititle}>
-          <span>{results[0].release_date.substring(0, 4)}</span>
+          <span>{results[0].first_air_date.substring(0, 4)}</span>
           <span>
             ⭐ {results[0].vote_average ? results[0].vote_average : "0"}
           </span>
         </div>
         <div className={main.Trending}>Trending Now</div>
         <div className={main.gird_container}>
-          {results?.map((movie: IMovieProps, index: number) => {
+          <Seo title="Series" />
+          {results?.map((series: ITvProps, index: number) => {
             if (index !== 0) {
               return (
                 <Link
-                  href={`/movies/${movie.original_title}/${movie.id}`}
-                  key={movie.id}
+                  href={`/tv/${series.id}/${series.name}`}
+                  key={series.id}
                   legacyBehavior
                 >
-                  <a onClick={() => onClick(movie.id, movie.original_title)}>
+                  <a onClick={() => onClick(series.id, series.name)}>
                     <div className={main.grid_Itemlist}>
                       <img
-                        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                        src={`https://image.tmdb.org/t/p/w500${series.poster_path}`}
                       />
                       <div className={main.Info}>
                         <div className={main.Info_title}>
-                          {movie.title || movie.original_title}
+                          {series.name || series.original_name}
                           <h4 className={main.Info_average}>
-                            ⭐ {movie.vote_average ? movie.vote_average : "0"}
+                            ⭐ {series.vote_average ? series.vote_average : "0"}
                           </h4>
                         </div>
                       </div>
@@ -92,9 +87,9 @@ export default function Home({
   );
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps({}: GetServerSideProps) {
   const { results } = await (
-    await fetch(`https://neonflix-nextjs-app.vercel.app/api/movies`)
+    await fetch(`https://neonflix-nextjs-app.vercel.app/api/tv`)
   ).json();
   return {
     props: {
