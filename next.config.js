@@ -38,6 +38,16 @@ const nextConfig = {
         source: "/api/tv/:id",
         destination: `https://api.themoviedb.org/3/tv/:id?api_key=${API_KEY}`,
       },
+      {
+        // search movie 결과
+        source: "/api/search/:keyword",
+        destination: `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=:keyword&page=1`,
+      },
+      {
+        // search tv 결과
+        source: "/api/search/:keyword",
+        destination: `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&language=en-US&query=:keyword&page=1`,
+      },
     ];
   },
 };
