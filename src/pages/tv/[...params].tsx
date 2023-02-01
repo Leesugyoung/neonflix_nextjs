@@ -73,12 +73,12 @@ const SeriesDetail: React.FC<{ data: ITvDetailProps }> = ({ data }) => {
         <span className={detail.openday}>
           {sub_Openday ? sub_Openday : "not Info"}
         </span>
-        <span>
+        <span style={{ color: "#c2c2c2" }}>
           ⭐ {data.vote_average ? data.vote_average.toFixed(1) : "Not vote"}
         </span>
         {data.genres ? (
           data.genres.slice(0, 3).map((gen, index) => (
-            <span key={gen.id}>
+            <span style={{ color: "#c2c2c2" }} key={gen.id}>
               {gen.name}
               {index !== data.genres.slice(0, 3).length - 1 && " ·"}
             </span>
