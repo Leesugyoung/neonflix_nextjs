@@ -93,7 +93,9 @@ export default function Home({
 }
 
 export async function getServerSideProps() {
-  const { results } = await (await fetch(`/api/movies`)).json();
+  const { results } = await (
+    await fetch(`https://neonflix-nextjs-app.vercel.app/api/movies`)
+  ).json();
   return {
     props: {
       results,
