@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -25,7 +26,13 @@ export default function NavBar() {
             : "#141414",
       }}
     >
-      <img className="logo" src="/N_logo.svg" />
+      <Image
+        className="logo"
+        src="/N_logo.svg"
+        alt="N_logo"
+        width={20}
+        height={20}
+      />
       <div>
         <Link href="/" legacyBehavior>
           <a className={router.pathname === "/" ? "active" : ""}>Movie</a>
