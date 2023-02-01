@@ -7,6 +7,14 @@
     padding-top: 80px;
     height: 100vh;
 }
+
+@media (max-width: 575px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
 .backdrop_span {
     z-index: 1;
     width: 500px;
