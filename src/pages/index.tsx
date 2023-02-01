@@ -31,7 +31,7 @@ export default function Home({
     <>
       <Seo title="Home" />
       <div className={main.container}>
-        <Link
+        {/* <Link
           href={`/movies/${results[0].title}/${results[0].id}`}
           legacyBehavior
         >
@@ -55,7 +55,7 @@ export default function Home({
           <span>
             ⭐ {results[0].vote_average ? results[0].vote_average : "0"}
           </span>
-        </div>
+        </div> */}
         <div className={main.Trending}>Trending Now</div>
         <div className={main.gird_container}>
           {results?.map((movie: IMovieProps, index: number) => {
