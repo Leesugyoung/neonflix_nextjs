@@ -26,8 +26,6 @@ export default function Home({
       pathname: `/movies/${title}/${id}`,
     });
   };
-  console.log("results", results);
-
   return (
     <>
       <Seo title="Home" />
@@ -69,8 +67,12 @@ export default function Home({
                 >
                   <a onClick={() => onClick(movie.id, movie.original_title)}>
                     <div className={main.grid_Itemlist}>
-                      <img
+                      <Image
                         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                        alt="Movie poster_path"
+                        width={230}
+                        height={345}
+                        priority
                       />
                       <div className={main.Info}>
                         <div className={main.Info_title}>
