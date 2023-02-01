@@ -1,8 +1,16 @@
 .container {
   background-color: #181818;
   width: 520px;
-  min-height: 100vh;
 }
+
+@media (max-width: 575px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+
 .searchBar {
   padding-top: 80px;
   padding-left: 20px;
