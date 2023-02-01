@@ -64,8 +64,12 @@ export default function Series({
                 >
                   <a onClick={() => onClick(series.id, series.name)}>
                     <div className={main.grid_Itemlist}>
-                      <img
+                      <Image
                         src={`https://image.tmdb.org/t/p/w500${series.poster_path}`}
+                        alt="Movie poster_path"
+                        width={230}
+                        height={345}
+                        priority
                       />
                       <div className={main.Info}>
                         <div className={main.Info_title}>
