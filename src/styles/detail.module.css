@@ -5,6 +5,7 @@
     padding: 20px;
     background-color: #181818;
     padding-top: 80px;
+    height: 100vh;
 }
 .backdrop_span {
     z-index: 1;
