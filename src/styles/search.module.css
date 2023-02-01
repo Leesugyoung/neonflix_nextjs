@@ -1,6 +1,6 @@
 .container {
   background-color: #181818;
-  min-width: 520px;
+  max-width: 520px;
   height: 100vh;
   width: 100vw;
 }
