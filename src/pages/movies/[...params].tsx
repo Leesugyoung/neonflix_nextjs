@@ -24,7 +24,9 @@ interface IMovieDetailProps {
 }
 
 const MovieDetail: React.FC<{ data: IMovieDetailProps }> = ({ data }) => {
-  const sub_Openday = data.release_date.substring(0, 4);
+  const sub_Openday = data.release_date
+    ? data.release_date.substring(0, 4)
+    : "";
   return (
     <div className={detail.container}>
       <Seo title={data.title} />

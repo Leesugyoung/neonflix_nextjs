@@ -24,7 +24,9 @@ interface ITvDetailProps {
 }
 
 const SeriesDetail: React.FC<{ data: ITvDetailProps }> = ({ data }) => {
-  const sub_Openday = data.first_air_date.substring(0, 4);
+  const sub_Openday = data.first_air_date
+    ? data.first_air_date.substring(0, 4)
+    : "";
   return (
     <div className={detail.container}>
       <Seo title={data.name} />
