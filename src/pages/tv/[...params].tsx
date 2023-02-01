@@ -50,13 +50,23 @@ const SeriesDetail: React.FC<{ data: ITvDetailProps }> = ({ data }) => {
         )}
       </span>
       <span className={detail.poster_span}>
-        <Image
-          src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
-          alt="series poster_path"
-          width={230}
-          height={340}
-          priority
-        />
+        {data.poster_path ? (
+          <Image
+            src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
+            alt="Series poster_path"
+            width={230}
+            height={340}
+            priority
+          />
+        ) : (
+          <Image
+            src={`/noPosterImg.jpg`}
+            alt="Series poster_path"
+            width={230}
+            height={340}
+            priority
+          />
+        )}
       </span>
       <div className={detail.Info}>
         <div className={detail.title}>{data.name}</div>
