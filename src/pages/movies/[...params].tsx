@@ -49,13 +49,23 @@ const MovieDetail: React.FC<{ data: IMovieDetailProps }> = ({ data }) => {
         )}
       </span>
       <span className={detail.poster_span}>
-        <Image
-          src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
-          alt="movie poster_path"
-          width={230}
-          height={340}
-          priority
-        />
+        {data.poster_path ? (
+          <Image
+            src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
+            alt="Movie poster_path"
+            width={230}
+            height={340}
+            priority
+          />
+        ) : (
+          <Image
+            src={`/noPosterImg.jpg`}
+            alt="Movie poster_path"
+            width={230}
+            height={340}
+            priority
+          />
+        )}
       </span>
       <div className={detail.Info}>
         <div className={detail.title}>{data.title}</div>
