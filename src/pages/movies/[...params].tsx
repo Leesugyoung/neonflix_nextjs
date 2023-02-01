@@ -30,63 +30,65 @@ const MovieDetail: React.FC<{ data: IMovieDetailProps }> = ({ data }) => {
   return (
     <div className={detail.container}>
       <Seo title={data.title} />
-      <span className={detail.backdrop_span}>
-        {data.backdrop_path ? (
-          <Image
-            src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
-            alt="movie backdrop_path"
-            width={520}
-            height={410}
-            priority
-          />
-        ) : (
-          <Image
-            src={`/notimage.jpg`}
-            alt="movie backdrop_path"
-            width={520}
-            height={410}
-          />
-        )}
-      </span>
-      <span className={detail.poster_span}>
-        {data.poster_path ? (
-          <Image
-            src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
-            alt="Movie poster_path"
-            width={230}
-            height={340}
-            priority
-          />
-        ) : (
-          <Image
-            src={`/noPosterImg.jpg`}
-            alt="Movie poster_path"
-            width={230}
-            height={340}
-            priority
-          />
-        )}
-      </span>
-      <div className={detail.Info}>
-        <div className={detail.title}>{data.title}</div>
-        <span className={detail.openday}>
-          {sub_Openday ? sub_Openday : "Not Info"}
+      <div className={detail.InfoWarp}>
+        <span className={detail.backdrop_span}>
+          {data.backdrop_path ? (
+            <Image
+              src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
+              alt="movie backdrop_path"
+              width={520}
+              height={410}
+              priority
+            />
+          ) : (
+            <Image
+              src={`/notimage.jpg`}
+              alt="movie backdrop_path"
+              width={520}
+              height={410}
+            />
+          )}
         </span>
-        <span>
-          ⭐ {data.vote_average ? data.vote_average.toFixed(1) : "Not vote"}
+        <span className={detail.poster_span}>
+          {data.poster_path ? (
+            <Image
+              src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
+              alt="Movie poster_path"
+              width={230}
+              height={340}
+              priority
+            />
+          ) : (
+            <Image
+              src={`/noPosterImg.jpg`}
+              alt="Movie poster_path"
+              width={230}
+              height={340}
+              priority
+            />
+          )}
         </span>
-        {data.genres ? (
-          data.genres.slice(0, 3).map((gen, index) => (
-            <span key={gen.id}>
-              {gen.name}
-              {index !== data.genres.slice(0, 3).length - 1 && " ·"}
-            </span>
-          ))
-        ) : (
-          <span>not genres</span>
-        )}
-        <div className={detail.overview}>
-          {data.overview ? data.overview : "Not overview."}
+        <div className={detail.Info}>
+          <div className={detail.title}>{data.title}</div>
+          <span className={detail.openday}>
+            {sub_Openday ? sub_Openday : "Not Info"}
+          </span>
+          <span style={{ color: "#c2c2c2" }}>
+            ⭐ {data.vote_average ? data.vote_average.toFixed(1) : "Not vote"}
+          </span>
+          {data.genres ? (
+            data.genres.slice(0, 3).map((gen, index) => (
+              <span style={{ color: "#c2c2c2" }} key={gen.id}>
+                {gen.name}
+                {index !== data.genres.slice(0, 3).length - 1 && " ·"}
+              </span>
+            ))
+          ) : (
+            <span>not genres</span>
+          )}
+          <div className={detail.overview}>
+            {data.overview ? data.overview : "Not overview."}
+          </div>
         </div>
       </div>
     </div>
