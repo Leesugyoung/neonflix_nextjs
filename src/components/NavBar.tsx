@@ -30,8 +30,8 @@ export default function NavBar() {
         className="logo"
         src="/N_logo.svg"
         alt="N_logo"
-        width={20}
-        height={20}
+        width={25}
+        height={25}
       />
       <div>
         <Link href="/" legacyBehavior>
