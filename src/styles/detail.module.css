@@ -9,12 +9,11 @@
 }
 
 @media (max-width: 767px){
-	.container {
+	.noresults{
         width: 100%;
-        height: 100%;
+        min-height: 590px;
     }
 }
-
 
 .backdrop_span {
     z-index: 1;
