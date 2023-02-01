@@ -6,19 +6,8 @@
     padding: 20px;
     background-color: #181818;
     padding-top: 80px;
-    height: 100%;
+    height: 100vh;
 }
-
-@media (max-width: 767px) {
-  .container {
-    width: 100%;
-    padding: 20px;
-    background-color: #181818;
-    padding-top: 80px;
-    height: 100%;
-}
-}
-
 .backdrop_span {
     z-index: 1;
     width: 500px;
@@ -39,6 +28,7 @@
     top: -60px;
     text-align: center;
 }
+
 .title {
     color: #fff;
     font-size: 36px;
@@ -54,6 +44,7 @@
     padding: 1px 4px;
     border-radius: 3px;
     border: 1px solid #dadada;
+    margin-right:5px;
 }
 .overview {
     color: #fff;
