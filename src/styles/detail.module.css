@@ -1,0 +1,58 @@
+/* 디테일 페이지 */
+
+.container {
+    width: 520px;
+    padding: 20px;
+    background-color: #181818;
+    padding-top: 80px;
+    height: 100vh;
+}
+.backdrop_span {
+    z-index: 1;
+    width: 500px;
+    position: relative;
+    left: -20px;
+    top: -55px;
+    filter: blur(6px) opacity(30%);
+}
+.poster_span {
+    margin-left: 125px;
+    z-index: 2;
+    position: absolute;
+    top: 80px;
+}
+.Info {
+    color: #bbbbbb;
+    position: relative;
+    top: -60px;
+    text-align: center;
+}
+.title {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    text-shadow: 2px 1.5px 3px rgb(126, 126, 126);
+    margin-bottom: 30px;
+}
+.Info span {
+    margin-right: 8px;
+}
+.openday {
+    color: #46d369;
+    padding: 1px 4px;
+    border-radius: 3px;
+    border: 1px solid #dadada;
+}
+.overview {
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 15px;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
