@@ -43,7 +43,7 @@ table {
 }
   /* 아래부터는 개별적으로 적용한 내용들! */
 html,
-body {
+body, main {
   max-width: 520px;
   width: 100vw;
   margin: 0 auto;
