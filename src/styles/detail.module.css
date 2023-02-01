@@ -9,7 +9,7 @@
 }
 
 @media (max-width: 767px){
-	.noresults{
+	.container{
         width: 100%;
         min-height: 590px;
     }
