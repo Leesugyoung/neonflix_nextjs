@@ -1,5 +1,4 @@
 import Seo from "@/components/Seo";
-import axios from "axios";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,9 +26,10 @@ export default function Home({
       pathname: `/movies/${title}/${id}`,
     });
   };
-  console.log(results);
+
   return (
     <>
+      <Seo title="Home" />
       <div className={main.container}>
         <Link
           href={`/movies/${results[0].title}/${results[0].id}`}
@@ -58,7 +58,6 @@ export default function Home({
         </div>
         <div className={main.Trending}>Trending Now</div>
         <div className={main.gird_container}>
-          <Seo title="Home" />
           {results?.map((movie: IMovieProps, index: number) => {
             if (index !== 0) {
               return (
