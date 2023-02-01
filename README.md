@@ -1,38 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Neonflix App
 
-## Getting Started
+Neonflix 를 만들고 나서, NextJS 를 독학하며 만든 app 버전입니다.  
+NextJs, React, TypeScript 를 사용했습니다 :)
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+### 🌐 프로젝트 링크
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Neonflix app 바로가기](https://neonflix-nextjs-app.vercel.app/)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### 🚀 개발환경
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- 언어 : JavaScript(ES6), TypeScript
+- 프론트 : NextJS, React
+- 배포 : vercel
+- 라이브러리 : npm
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+### ⚙️ 기능 설명
 
-To learn more about Next.js, take a look at the following resources:
+- 업데이트 예정
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 📝 프로젝트 구조
 
-## Deploy on Vercel
+-📂[src]
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 업데이트 예정
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+#### 🤯 추후 추가 예정인 기능
+
+- 업데이트 예정
+
+---
+
+#### 🤗 후기
+
+- 업데이트 예정

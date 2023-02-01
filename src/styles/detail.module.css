@@ -8,12 +8,13 @@
     height: 100vh;
 }
 
-@media (pointer:coarse) {
-    .container{
+@media (max-width: 767px){
+	.container {
         width: 100%;
-        min-height: 100vh;
+        height: 100%;
     }
 }
+
 
 .backdrop_span {
     z-index: 1;
