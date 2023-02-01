@@ -2,12 +2,6 @@
     background-color: #181818;
     width: 520px;
 }
-@media (max-width: 575px) {
-  .container {
-    width: 100vw;
-    height: 100vh;
-  }
-}
 
 .gradient {
     background-image: linear-gradient(to top, #181818, rgba(0, 0, 0, 0));

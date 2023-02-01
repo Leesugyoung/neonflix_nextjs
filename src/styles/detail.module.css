@@ -8,13 +8,6 @@
     height: 100vh;
 }
 
-@media (max-width: 575px) {
-  .container {
-    width: 100%;
-    height: 100%;
-  }
-}
-
 .backdrop_span {
     z-index: 1;
     width: 500px;
