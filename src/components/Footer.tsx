@@ -20,7 +20,11 @@ export default function Footer() {
           text-align: center;
           padding-top: 20px;
           padding-bottom: 10px;
-          width: 520px;
+          width: 540px;
+          height: 6vh;
+          margin: 0 auto;
+          position: relative;
+          bottom: 0;
         }
         span,
         p {
@@ -31,6 +35,11 @@ export default function Footer() {
           font-weight: 600;
           margin-left: 5px;
           font-size: 12px;
+        }
+        @media screen and (max-width: 767px) {
+          div {
+            height: 80px;
+          }
         }
       `}</style>
     </>

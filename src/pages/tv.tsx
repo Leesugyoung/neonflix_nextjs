@@ -33,7 +33,7 @@ export default function Series({
           <Image
             src={`https://image.tmdb.org/t/p/w500${results[0].backdrop_path}`}
             alt="results[0].backdrop_path"
-            width={520}
+            width={540}
             height={310}
             priority
             quality={100}

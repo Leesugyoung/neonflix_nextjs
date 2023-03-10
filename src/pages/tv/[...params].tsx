@@ -35,7 +35,7 @@ const SeriesDetail: React.FC<{ data: ITvDetailProps }> = ({ data }) => {
           <Image
             src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
             alt="series backdrop_path"
-            width={520}
+            width={540}
             height={410}
             priority
           />
@@ -43,7 +43,7 @@ const SeriesDetail: React.FC<{ data: ITvDetailProps }> = ({ data }) => {
           <Image
             src={`/notimage.jpg`}
             alt="series backdrop_path"
-            width={520}
+            width={540}
             height={410}
             priority
           />

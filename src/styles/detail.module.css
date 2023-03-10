@@ -1,26 +1,24 @@
 /* 디테일 페이지 */
 .container {
-    min-width: 520px;
-    width: 520px;
-    padding: 20px;
-    background-color: #181818;
+    width: 540px;
+    background-color: hsl(0, 0%, 9%);
     padding-top: 80px;
-    height: 100vh;
+    height: 94vh;
+    margin: 0 auto;
+    /* 나머지 6vh 는 footer 에 적용*/
 }
 
 .backdrop_span {
     z-index: 1;
-    width: 500px;
     position: relative;
-    left: -20px;
-    top: -55px;
-    filter: blur(6px) opacity(30%);
+    filter: blur(8px) opacity(20%);
 }
 .poster_span {
-    margin-left: 125px;
     z-index: 2;
     position: absolute;
-    top: 80px;
+    top: 110px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .Info {
     color: #bbbbbb;
@@ -35,6 +33,7 @@
     font-weight: 700;
     text-shadow: 2px 1.5px 3px rgb(126, 126, 126);
     margin-bottom: 30px;
+    margin-top: 50px;
 }
 .Info span {
     margin-right: 8px;
@@ -51,19 +50,24 @@
     font-weight: 400;
     font-size: 16px;
     margin-top: 15px;
-    padding: 0 5px;
+    padding: 10px 20px;
     line-height: 22px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 6; /* 라인수 */
+    -webkit-line-clamp: 12; /* 라인수 */
     -webkit-box-orient: vertical;
     word-wrap: break-word;
 }
 
-@media (max-width: 767px){
-	.overview{
-        width: 100%;
-        min-height: 580px;
+@media screen and (max-width: 767px){
+	.container{
+        height: 122.5vh;
     }
-}
+
+    .poster_span {
+    position: absolute;
+    left: 85%;
+    transform: translateX(-85%);
+    }
+} 

@@ -41,15 +41,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-  /* 아래부터는 개별적으로 적용한 내용들! */
-html,
-body, main {
-  max-width: 520px;
-  width: 100vw;
+
+body {
+	font-family: "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+main {
   margin: 0 auto;
-  line-height: 1.2;
-	height: 100vh;
-  font-family: "Segoe UI", Roboto, Ubuntu, sans-serif;
 }
 
 a {

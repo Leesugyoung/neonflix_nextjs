@@ -1,6 +1,5 @@
 import Seo from "@/components/Seo";
 import Image from "next/image";
-import { useEffect } from "react";
 import detail from "../../styles/detail.module.css";
 
 interface ISearchProps {
@@ -38,7 +37,7 @@ const SearchDetail: React.FC<{
             <Image
               src={`https://image.tmdb.org/t/p/w500${resultsdata.backdrop_path}`}
               alt="movie backdrop_path"
-              width={520}
+              width={540}
               height={410}
               priority
             />
@@ -46,7 +45,7 @@ const SearchDetail: React.FC<{
             <Image
               src={`/notimage.jpg`}
               alt="movie backdrop_path"
-              width={520}
+              width={540}
               height={410}
             />
           )}

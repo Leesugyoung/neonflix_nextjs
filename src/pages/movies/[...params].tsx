@@ -36,7 +36,7 @@ const MovieDetail: React.FC<{ data: IMovieDetailProps }> = ({ data }) => {
             <Image
               src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
               alt="movie backdrop_path"
-              width={520}
+              width={540}
               height={410}
               priority
             />
@@ -44,7 +44,7 @@ const MovieDetail: React.FC<{ data: IMovieDetailProps }> = ({ data }) => {
             <Image
               src={`/notimage.jpg`}
               alt="movie backdrop_path"
-              width={520}
+              width={540}
               height={410}
             />
           )}
